@@ -23,9 +23,9 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Crowbotics Lite API",
+        title="Crowdbotics Lite API",
         default_version="v1",
-        description="The official API for Crowbotics Lite",
+        description="The official API for Crowdbotics Lite",
         contact=openapi.Contact(email="hesbonkiptoo5600@gmail.com"),
         license=openapi.License(name="MIT License"),
     ),

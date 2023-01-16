@@ -5,7 +5,7 @@ class EnvNoDefaultException(Exception):
     pass
 
 
-class CrowboticsEnv(environ.Env):
+class CrowdboticsEnv(environ.Env):
     """
     Enforces the optional default param for Env() without modifying the entire class.
     """

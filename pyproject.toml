@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "crowbotics-lite"
+name = "crowdbotics-lite"
 version = "0.1.0"
 description = ""
 authors = ["Hesbon5600 <hesbonkiptoo5600@gmail.com>"]

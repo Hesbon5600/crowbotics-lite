@@ -1,4 +1,4 @@
-# Crowbotics Lite
+# Crowdbotics Lite
 
 ## Api Documentation
 
@@ -18,18 +18,18 @@
 - clone the repository
 
 ```bash
-https://github.com/crowbotics-lite .git
+https://github.com/crowdbotics-lite .git
 ```
 
 - cd into the directory
 
 ```bash
-cd crowbotics-lite
+cd crowdbotics-lite
 ```
 
 ### create environment variables
 
-  On Unix or MacOS, run:
+On Unix or MacOS, run:
 
 ```bash
 cp .env.example .env
@@ -47,7 +47,6 @@ source .env
 
 ---
 
-
 > > ### VIRTUAL ENVIRONMENT
 
 ---
@@ -57,7 +56,6 @@ source .env
 ```bash
 make activate
 ```
-
 
 **Installing dependencies:**
 
