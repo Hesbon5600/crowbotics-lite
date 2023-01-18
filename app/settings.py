@@ -151,11 +151,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGOUT_ON_GET = True
 
 # Swagger settings
 SWAGGER_SETTINGS = {
     "LOGIN_URL": "/admin/login/",
-    "LOGOUT_URL": "/admin/logout/",
+    "LOGOUT_URL": "/api/v1/auth/logout/",
 }
 
 

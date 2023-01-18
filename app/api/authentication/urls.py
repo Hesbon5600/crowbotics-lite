@@ -20,6 +20,11 @@ from . import views
 
 urlpatterns = [
     path("", include("django.contrib.auth.urls")),
+    path(
+        "password/reset/",
+        views.CustomPasswordResetView.as_view(),
+        name="password_reset",
+    ),
     path("rest-auth/", include("dj_rest_auth.urls")),
     path(
         "rest-auth/registration/", views.CustomRegisterView.as_view(), name="register"
