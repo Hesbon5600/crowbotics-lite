@@ -6,16 +6,30 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
+from ..helpers.serialization_errors import error_dict
+
 User = get_user_model()
 
 
 class RegisterSerializer(serializers.Serializer):
     username = serializers.CharField(
-        required=True, validators=[UniqueValidator(queryset=User.objects.all())]
+        required=True,
+        validators=[
+            UniqueValidator(
+                queryset=User.objects.all(),
+                message=error_dict["already_exist"].format("Username"),
+            )
+        ],
     )
 
     email = serializers.EmailField(
-        required=True, validators=[UniqueValidator(queryset=User.objects.all())]
+        required=True,
+        validators=[
+            UniqueValidator(
+                queryset=User.objects.all(),
+                message=error_dict["already_exist"].format("Email"),
+            )
+        ],
     )
 
     password = serializers.CharField(

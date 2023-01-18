@@ -13,8 +13,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from allauth.account import views as allauth_views
 from dj_rest_auth.registration.views import VerifyEmailView
-from django.urls import include, path
+from django.urls import include, path, re_path
 
 from . import views
 
@@ -34,4 +35,11 @@ urlpatterns = [
         VerifyEmailView.as_view(),
         name="verify-email",
     ),
+    re_path(
+        r"^confirm-email/(?P<key>[-:\w]+)/$",
+        allauth_views.confirm_email,
+        name="account_confirm_email",
+    ),
+    path("email/", allauth_views.email, name="account_email"),
+    path("logout/", allauth_views.logout, name="account_logout"),
 ]
