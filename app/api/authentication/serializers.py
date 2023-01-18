@@ -20,6 +20,9 @@ class RegisterSerializer(serializers.Serializer):
     )
 
     def save(self, request):
+        """
+        Override the save method to create a new user
+        """
         user = User.objects.create_user(
             username=self.validated_data["username"],
             email=self.validated_data["email"],
