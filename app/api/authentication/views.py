@@ -4,4 +4,8 @@ from .serializers import RegisterSerializer
 
 
 class CustomRegisterView(RegisterView):
+    """
+    - Register a new user
+    """
+
     serializer_class = RegisterSerializer
