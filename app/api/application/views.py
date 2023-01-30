@@ -107,4 +107,4 @@ class SubscriptionRetrieveUpdateView(generics.RetrieveUpdateAPIView):
         """
         Filter the queryset to only include active subscriptions for the current user
         """
-        return queryset.filter(user=self.request.user, active=True)
+        return queryset.filter(application__user=self.request.user, active=True)
